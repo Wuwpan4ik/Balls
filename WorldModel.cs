@@ -11,7 +11,7 @@ namespace GravityBalls
 		public double WorldWidth;
 		public double WorldHeight;
 		public double xSpeed = 0;
-        public double ySpeed = 100;
+        	public double ySpeed = 100;
 		public double airResistance = 0.9944;
 
         public void SimulateTimeframe(double dt)
