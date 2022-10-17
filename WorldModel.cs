@@ -17,12 +17,12 @@ namespace GravityBalls
         public void SimulateTimeframe(double dt)
 		{
 			BallX = Math.Min(BallX + xSpeed * dt, WorldWidth - BallRadius);
-            BallY = Math.Min(BallY + ySpeed * dt , WorldHeight - BallRadius);
+            		BallY = Math.Min(BallY + ySpeed * dt , WorldHeight - BallRadius);
 			//MouseRepulsion();
 			SlowdownBall();
-            BounceWall();
+            		BounceWall();
 			SharpBoost();
-        }
+        	}	
 
 		public void forceAttraction()
 		{
@@ -49,12 +49,12 @@ namespace GravityBalls
 		}
 
 		public void BounceWall()
-        {
-            if (BallX == WorldWidth - BallRadius || BallX <= BallRadius) 
-				xSpeed *= -1;
-            if (BallY == WorldHeight - BallRadius || BallY <= BallRadius) 
-				ySpeed *= -1;
-        }
+		{
+		    if (BallX == WorldWidth - BallRadius || BallX <= BallRadius) 
+					xSpeed *= -1;
+		    if (BallY == WorldHeight - BallRadius || BallY <= BallRadius) 
+					ySpeed *= -1;
+		}
 		
 		public void SharpBoost()
 		{
